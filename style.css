@@ -1,0 +1,102 @@
+/* Custom animations and styles */
+
+/* Animated title */
+.animated-title {
+    animation: fadeInDown 1.2s ease-out;
+}
+
+/* Weather icon animation */
+.weather-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    animation: pulse 2s infinite;
+}
+
+/* Recent search buttons animation */
+.search-item {
+    transition: all 0.3s ease;
+}
+
+.search-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather card animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Forecast card hover effect */
+.forecast-card {
+    transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Weather details section */
+.weather-details i {
+    width: 24px;
+    text-align: center;
+    color: var(--bs-info);
+}
+
+/* Forecast section */
+.forecast-container {
+    overflow-x: auto;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 767.98px) {
+    .forecast-container {
+        padding-bottom: 10px;
+    }
+    
+    #weather-temp {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .weather-details .col-6 {
+        width: 100%;
+    }
+}
